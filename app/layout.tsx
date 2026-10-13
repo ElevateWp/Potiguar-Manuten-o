@@ -8,25 +8,25 @@ import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3456'),
+  metadataBase: new URL('https://potiguarmanutencao.com.br'),
   title: {
-    default: 'CJ Roofing Services Ltd',
+    default: 'Potiguar Manutenção - Pintor, Encanador, Eletricista e Reformas',
     template: '%s',
   },
   description:
-    'CJ Roofing Services Ltd provides roof replacements, flat roof installation, repairs and gutter services across Dublin. Call +353 1 556 3783.',
+    'Potiguar Manutenção oferece serviços de pintura, encanamento, elétrica e reformas em Ponta Negra, Natal, RN.',
   keywords: [
-    'CJ Roofing Services Ltd',
-    'roof replacement Dublin',
-    'roof repairs Dublin',
+    'Potiguar Manutenção',
+    'pintor encanador eletricista em Natal',
+    'reformas residenciais em Ponta Negra',
   ],
-  authors: [{ name: 'CJ Roofing Services Ltd' }],
+  authors: [{ name: 'Potiguar Manutenção' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
       { url: '/icon.png', sizes: '192x192', type: 'image/png' },
     ],
-    shortcut: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+    shortcut: [{ url: '/icon.png', type: 'image/png' }],
     apple: [{ url: '/icon.png', sizes: '180x180', type: 'image/png' }],
   },
 };
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IE" className="scroll-smooth">
+    <html lang="pt-BR" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -46,11 +46,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F7F7F7] selection:text-[#1C1A1B]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F3F6FF] selection:text-[#172554]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">
-          Skip to main content
+          Pular para o conteúdo principal
         </a>
         <LenisProvider>
           <Navbar />
